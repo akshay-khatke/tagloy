@@ -1,7 +1,7 @@
 
 import EncryptedStorage from 'react-native-encrypted-storage';
 const storeUserInfo = async (input: any) => {
-    console.log(input, "check the input")
+
     try {
         await EncryptedStorage.setItem(
             "login",

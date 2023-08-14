@@ -11,12 +11,21 @@ type LoginProps = {
 }
 
 const Login: React.FC<LoginProps> = () => {
+    
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const dispatch = useDispatch()
     const [isValidEmail, setIsValidEmail] = useState(true)
     const [showPassword, setShowPassword] = useState(false);
+
     const onLoginPress = () => {
+        if (email === "" && !isValidEmail) {
+            return
+        }
+        if (password === "") {
+            return
+        }
+
         dispatch(addUserInfo({ email: email, password: password }));
 
         //After api call response 

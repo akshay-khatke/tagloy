@@ -24,14 +24,14 @@ export const DashboardStack = () => {
 
 export const ScreenOneStack = () => {
   return (
-    <StackNavigator.Navigator screenOptions={
+    <ScreenOneNavigator.Navigator screenOptions={
       {
         headerShown: false,
       }
     }>
-      <StackNavigator.Screen name="ScreenOne" component={ScreenOne} />
-      <StackNavigator.Screen name="Profile" component={Profile} />
-    </StackNavigator.Navigator>
+      <ScreenOneNavigator.Screen name="ScreenOne" component={ScreenOne} />
+      <ScreenOneNavigator.Screen name="Profile" component={Profile} />
+    </ScreenOneNavigator.Navigator>
   );
 }
 
